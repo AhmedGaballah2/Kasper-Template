@@ -1,4 +1,4 @@
-# Kasper Template
+# Kasper | Template
 
 Kasper Template is a clean and modern frontend template built with **HTML & CSS only**.  
 It is **fully responsive**, working seamlessly on all devices (Desktop, Tablet, Mobile).
