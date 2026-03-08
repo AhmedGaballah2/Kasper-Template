@@ -8,7 +8,7 @@ It is **fully responsive**, working seamlessly on all devices (Desktop, Tablet, 
 ## 📂 Project Structure
 
 - `index.html` - The main HTML page of the template.  
-- `style.css` - Main CSS file for styling the template.  
+- `master.css` - Main CSS file for styling the template.  
 - Additional assets like images or fonts (if any).
 
 ---
