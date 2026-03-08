@@ -1,0 +1,737 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 150%;
+  margin: 0px;
+  font-family: arial;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  background-color: #eee;
+  line-height: 1.5;
+}
+
+.container {
+  min-height: 200dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.header-container {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  margin: 0px;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  column-gap: 10px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pc-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 80px;
+}
+
+.search {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: whitesmoke;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  transform: translateY(-50%);
+}
+
+.fas {
+  font-size: 25px;
+  position: absolute;
+  color: dimgrey;
+  top: calc(50% - 2.5px);
+  right: 7px;
+  transform: translateY(-50%);
+}
+
+.fas:active {
+  color: #ccc;
+}
+
+.side-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.fa {
+  background-color: #eee;
+  color: black;
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 30px);
+  right: 20px;
+}
+.side-bar-items {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+  padding: 10px 20px;
+  margin-right: 90px;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: calc(50% - 45px);
+  right: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.side-bar:hover .side-bar-items {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.side-bar-items li {
+  text-align: center;
+}
+
+.side-bar-items li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-bar-items li:active {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.body {
+  margin-top: 160px;
+  padding: 0px 40px;
+}
+
+.download-page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.roman {
+  width: 680px;
+  height: 500px;
+  border: 1px solid #909090;
+  border-radius: 20px;
+}
+
+.uploaded {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.uploaded a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.4s ease;
+}
+
+.uploaded a:hover {
+  color: dimgray;
+}
+
+.right-side {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #909090;
+  border-radius: 20px;
+  text-transform: none;
+}
+
+.about-us a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: color 0.4s ease;
+}
+.about-us a:hover {
+ color: dimgrey; 
+}
+
+.right-side button {
+  margin: 20px 0px 30px;
+  padding: 10px 80px;
+  background-color: #E0E0E0;
+  border: 1px solid #909090;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.right-side button:hover {
+  color: white;
+  background-color: black;
+}
+
+.dimensions-format span {
+  font-weight: bold;
+}
+
+.dimensions-format {
+  display: flex;
+  justify-content: space-between;
+}
+
+.license {
+  text-align: start;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.related {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.related-photos {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.photo-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-num {
+  padding: 10px;
+  width: 5ch;
+  text-align: center;
+}
+
+.the-photos {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.the-photos div div a {
+  text-decoration: none;
+}
+
+.waterfalls,
+.buildings,
+.animals,
+.boats,
+.love,
+.mountain,
+.wedding,
+.statues,
+.football,
+.cars,
+.avengers,
+.moon,
+.games,
+.islam,
+.dark,
+.tv-show,
+.tennis,
+.f1,
+.basketball,
+.mma,
+.boxing,
+.chess,
+.beach,
+.airplanes,
+.pyramids,
+.army,
+.sky,
+.palace {
+  margin: 0px 0px 40px;
+  width: 680px;
+  height: 500px;
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+.the-photo-title {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+.waterfalls:hover .the-photo-title,
+.buildings:hover .the-photo-title,
+.animals:hover .the-photo-title,
+.boats:hover .the-photo-title,
+.love:hover .the-photo-title,
+.mountain:hover .the-photo-title,
+.wedding:hover .the-photo-title,
+.statues:hover .the-photo-title,
+.football:hover .the-photo-title,
+.cars:hover .the-photo-title,
+.avengers:hover .the-photo-title,
+.moon:hover .the-photo-title,
+.games:hover .the-photo-title,
+.islam:hover .the-photo-title,
+.dark:hover .the-photo-title,
+.tv-show:hover .the-photo-title,
+.tennis:hover .the-photo-title,
+.f1:hover .the-photo-title,
+.basketball:hover .the-photo-title,
+.mma:hover .the-photo-title,
+.boxing:hover .the-photo-title,
+.chess:hover .the-photo-title,
+.beach:hover .the-photo-title,
+.airplanes:hover .the-photo-title,
+.pyramids:hover .the-photo-title,
+.army:hover .the-photo-title,
+.sky:hover .the-photo-title,
+.palace:hover .the-photo-title{
+  opacity: 1;
+  top: calc(-20px + 10%);
+  left: 10%;
+  width: 80%;
+  height: 75%;
+  font-size: 35px;
+}
+
+.waterfalls-photo,
+.buildings-photo,
+.animals-photo,
+.boats-photo,
+.love-photo,
+.mountain-photo,
+.wedding-photo,
+.statues-photo,
+.football-photo,
+.cars-photo,
+.avengers-photo,
+.moon-photo,
+.games-photo,
+.islam-photo,
+.dark-photo,
+.tv-show-photo,
+.tennis-photo,
+.f1-photo,
+.basketball-photo,
+.mma-photo,
+.boxing-photo,
+.chess-photo,
+.beach-photo,
+.airplanes-photo,
+.pyramids-photo,
+.army-photo,
+.sky-photo,
+.palace-photo {
+  width: 680px;
+  height: 500px;
+  border-radius: 20px;
+  border: 1px solid dimgray;
+}
+
+.page-scroll {
+  width: 100%;
+  margin: 10px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-status {
+  padding: 10px 35px;
+}
+
+.page-num,
+.page-status {
+  padding: 10px 15px;
+  background-color: #E0E0E0;
+  border: 1px solid #909090;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.page-status:hover,
+.page-num:hover {
+  color: white;
+  background-color: black;
+}
+
+
+.footer-container {
+  width: 100%;
+  margin-top: auto;
+  display: grid;
+  row-gap: 40px;
+  background-color: #323232;
+  color: white;
+  padding: 20px 40px;
+}
+
+.brief,
+.links {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.right p {
+  margin-right: 20px;
+  width: 100px;
+}
+
+.left p,
+.right p {
+  width: fit-content;
+  text-align: start;
+  transition: color 0.4s ease, background-color 0.4s ease; 
+}
+
+.left p:hover,
+.right p:hover,
+.left p:active,
+.right p:active {
+  color: dimgrey;
+  text-align: center;
+}
+
+.our-links,
+.mini-links {
+  width: 50%;
+}
+
+.mini-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-wallify,
+.our-links {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about-wallify-text {
+  text-transform: none;
+}
+
+.links-layout {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1,1fr);
+}
+
+.mini-links a {
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 30px;
+}
+
+.fa-facebook-f {
+  color: white;
+  background-color: #1877F2;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.fa-facebook-f:hover,
+.fa-facebook-f:active {
+  color: #1877F2;
+  background-color: white;
+}
+
+.fa-instagram {
+  color: white;
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  padding: 10px 10px;
+  border-radius: 6px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active {
+  color: #E4405F;
+  background: white;
+}
+
+.fa-x-twitter {
+  color: white;
+  background-color: black;
+  padding: 10px 10px;
+  border-radius: 6px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.fa-x-twitter:hover,
+.fa-x-twitter:active {
+  color: black;
+  background-color: white;
+}
+
+.fa-linkedin-in {
+  color: white;
+  background-color: #0A66C2;
+  padding: 10px 10px;
+  border-radius: 6px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.fa-linkedin-in:hover,
+.fa-linkedin-in:active {
+  color: #0A66C2;
+  background-color: white;
+}
+
+.last-row {
+  display: flex;
+}
+
+.copyright {
+  text-transform: none;
+}
+
+.copyright,
+.design {
+  width: 50%;
+}
+
+.design {
+  display: flex;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.design a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+
+.design a:hover {
+  color: dimgray;
+}
+
+@media (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+  .pc-image {
+    width: 130px;
+    height: 40px;
+  }
+  .search-bar {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  .fas {
+    font-size: 16px;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 16px;
+    top: calc(50% - 20px);
+  }
+  .side-bar-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px;
+    margin-right: 0;
+    top: calc(50% - 35px);
+    right: 70px;
+  }
+  .side-bar-items li {
+    padding: 15px;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+  .side-bar-items li:last-child {
+    border: none;
+  }
+  .body {
+  margin-top: 100px;
+  }
+  .download-page {
+    flex-wrap: wrap;
+  }
+  .roman {
+    width: 100%;
+    height: 400px;
+  }
+  .waterfalls,
+  .buildings,
+  .animals,
+  .boats,
+  .love,
+  .mountain,
+  .wedding,
+  .statues,
+  .football,
+  .cars,
+  .avengers,
+  .moon,
+  .games,
+  .islam,
+  .dark,
+  .tv-show,
+  .tennis,
+  .f1,
+  .basketball,
+  .mma,
+  .boxing,
+  .chess,
+  .beach,
+  .airplanes,
+  .pyramids,
+  .army,
+  .sky,
+  .palace  {
+    width: 100%;
+    height: 400px;
+  }
+  .waterfalls-photo,
+  .buildings-photo,
+  .animals-photo,
+  .boats-photo,
+  .love-photo,
+  .mountain-photo,
+  .wedding-photo,
+  .statues-photo,
+  .football-photo,
+  .cars-photo,
+  .avengers-photo,
+  .moon-photo,
+  .games-photo,
+  .islam-photo,
+  .dark-photo,
+  .tv-show-photo,
+  .tennis-photo,
+  .f1-photo,
+  .basketball-photo,
+  .mma-photo,
+  .boxing-photo,
+  .chess-photo,
+  .beach-photo,
+  .airplanes-photo,
+  .pyramids-photo, 
+  .army-photo,
+  .sky-photo,
+  .palace-photo {
+    width: 100%;
+    height: 400px;
+  }
+  .waterfalls:hover .the-photo-title,
+  .buildings:hover .the-photo-title,
+  .animals:hover .the-photo-title,
+  .boats:hover .the-photo-title,
+  .love:hover .the-photo-title,
+  .mountain:hover .the-photo-title,
+  .wedding:hover .the-photo-title,
+  .statues:hover .the-photo-title,
+  .football:hover .the-photo-title,
+  .cars:hover .the-photo-title,
+  .avengers:hover .the-photo-title,
+  .moon:hover .the-photo-title,
+  .games:hover .the-photo-title,
+  .islam:hover .the-photo-title,
+  .dark:hover .the-photo-title,
+  .tv-show:hover .the-photo-title,
+  .tennis:hover .the-photo-title,
+  .f1:hover .the-photo-title,
+  .basketball:hover .the-photo-title,
+  .mma:hover .the-photo-title,
+  .boxing:hover .the-photo-title,
+  .chess:hover .the-photo-title,
+  .beach:hover .the-photo-title,
+  .airplanes:hover .the-photo-title,
+  .pyramids:hover .the-photo-title,
+  .army:hover .the-photo-title,
+  .sky:hover .the-photo-title,
+  .palace:hover .the-photo-title{
+    top: calc(-20px + 7.5%);
+  }
+  .page-num,
+  .page-status {
+    font-size: 16px;
+  }
+  .footer-container {
+    row-gap: 0px;
+  }
+}
